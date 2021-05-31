@@ -70,6 +70,6 @@ sed -i -e "s/;daemonize\s*=\s*yes/daemonize = no/g" \
 /etc/php7/php-fpm.d/www.conf
 
 EXPOSE 443 80
-COPY .. /var/www
+COPY . /var/www
 RUN npm install && npm run prod
 CMD [ "/usr/bin/supervisord", "-n", "-c", "/etc/supervisord.conf"]
