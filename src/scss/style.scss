@@ -1,0 +1,104 @@
+@import "variables";
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css");
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;
+  overflow-x: hidden;
+  box-sizing: border-box;
+}
+.main {
+  background: url("../img/wallpaper.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+header {
+  nav {
+    min-height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    ul {
+      color: $white;
+      li {
+        font-size: 1rem;
+        display: inline-block;
+        padding: 5px;
+        a {
+          color: $white;
+          text-decoration: none;
+          transition: 0.5s;
+          &:hover {
+            color: $gray;
+          }
+        }
+      }
+    }
+  }
+}
+.right {
+  float: right;
+}
+.logo {
+  max-width: 50px;
+}
+.content {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: $white;
+  img {
+    max-width: 350px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+  }
+  p {
+    font-size: 1.5rem;
+  }
+}
+.bold {
+  font-weight: bold;
+}
+.light {
+  font-weight: lighter;
+}
+.socials {
+  margin-top: 20px;
+}
+.social-list {
+  display: inline-flex;
+  li {
+    margin-inline: 25px;
+    font-size: 2.5rem;
+    a {
+      text-decoration: none;
+      color: $white;
+      transition: 0.3s;
+      &:hover {
+        color: $gray;
+      }
+    }
+  }
+}
+@media screen and (max-width: 700px) {
+  header nav {
+    flex-direction: column;
+    align-items: center;
+    justify-content: normal;
+    ul {
+      margin-left: 0;
+      li {
+        display: block;
+        text-align: center;
+      }
+    }
+  }
+  .content img {
+    max-width: 250px;
+  }
+}

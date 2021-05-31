@@ -1,0 +1,10 @@
+version: "3"
+
+services:
+  melainegerard:
+    build:
+      context: ./
+      dockerfile: ./docker/DockerFile
+    ports:
+      - "8009:80"
+    working_dir: /var/www/dist
